@@ -1,0 +1,3 @@
+Parse these fields from the following xml log file.
+
+| Name | Employee ID | Start Date |

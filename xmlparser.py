@@ -12,14 +12,14 @@ openai.api_key_path = "key"
 
 # Open a file named input.txt and read that entire file into a variable named input
 
-with open('command2.txt') as c, open("input.txt") as f:
-    command2 = c.read()
+with open('command3.txt') as c, open("input2.txt") as f:
+    command3 = c.read()
     input = f.read()
 
 
 # Print the value of the variable named input
 
-print(command2 + '\n' + '\n' + input)
+print(command3 + '\n' + '\n' + input)
 
 
 
@@ -31,7 +31,7 @@ response = openai.Completion.create(
 
     max_tokens=300,
 
-    prompt=command2+  '\n' + '\n' + input,
+    prompt=command3+  '\n' + '\n' + input,
 
     temperature=0.3,
 

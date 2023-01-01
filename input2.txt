@@ -1,0 +1,6 @@
+<xml>
+   <name firstName="John" lastName="Doe" />
+   <employeeId>12345</employeeId>
+   <other>ignore</other>
+   <dateJoined>2014-05-16 10:50:14,125</dateJoined>
+</xml>
