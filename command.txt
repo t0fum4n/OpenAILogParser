@@ -1,0 +1,3 @@
+Parse the following log file with regex and give me the pattern that matches it
+
+| Source IP | Destination IP | Source Port | Destination Port | Source MAC |
