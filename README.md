@@ -112,3 +112,13 @@ Start Date: 2014-05-16 10:50:14,125
 Process finished with exit code 0
 
   ![image](https://user-images.githubusercontent.com/12946325/210185887-f28cc4d3-31dc-4ca9-a3ee-1fe147ad581f.png)
+  
+  
+Thinking about this. The hardest part of ingesting log sources here is classifying things via regex into dedicated fields. One could store a log message as a simple string of text and then tokenize the items in that string. Another model could then make decisions based on those tokens. For example. 
+
+the string "Malware has the token value of [15029, 1574] according to https://beta.openai.com/tokenizer
+the tring "malware" has the token value of [7617, 1574] according to the same source. 
+
+Now it doesnt take a data scientist to be able to tell that two of those tokens are alike.... 1574. The other two tokens are completely different however any person can tell that [15029, 1574] and [7617, 1574] are similar... even if Malware does not = malware
+
+This is obviously a simple example as this as far as my human brain can comrehend. This is why we have LMM's. 
