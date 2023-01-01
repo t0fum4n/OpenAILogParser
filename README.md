@@ -110,3 +110,5 @@ Employee ID: 12345
 Start Date: 2014-05-16 10:50:14,125
 
 Process finished with exit code 0
+
+  ![image](https://user-images.githubusercontent.com/12946325/210185887-f28cc4d3-31dc-4ca9-a3ee-1fe147ad581f.png)
