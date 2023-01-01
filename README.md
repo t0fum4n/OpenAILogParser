@@ -90,3 +90,23 @@ Tue Mar 04 15:57:06 2020: <14>Mar  4 15:53:03 BAR-NG-VF500 BAR-NG-VF500/box_Fire
 |:----------|:---------------|:------------|:-----------------|:-----------|
 | 192.168.70.7 | 8.8.8.8 | 35119 | 53 | 08:00:27:da:d7:9c |
 
+  
+Example of using davinci-003 to parse xml logs into a table with criteria tht are "like" the fields in the xml example
+  
+  Parse these fields from the following xml log file.
+
+| Name | Employee ID | Start Date |
+
+<xml>
+   <name firstName="John" lastName="Doe" />
+   <employeeId>12345</employeeId>
+   <other>ignore</other>
+   <dateJoined>2014-05-16 10:50:14,125</dateJoined>
+</xml>
+
+
+Name: John Doe
+Employee ID: 12345
+Start Date: 2014-05-16 10:50:14,125
+
+Process finished with exit code 0
