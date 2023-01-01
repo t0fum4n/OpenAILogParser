@@ -26,7 +26,7 @@ print(command2 + '\n' + '\n' + input)
 
 response = openai.Completion.create(
 
-    model="text-davinci-002",
+    model="text-davinci-003",
 
     max_tokens=300,
 
