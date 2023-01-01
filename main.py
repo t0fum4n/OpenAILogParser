@@ -22,7 +22,7 @@ print(command + '\n' + '\n' + input)
 
 
 
-# create a completion I changed this.
+# create a completion
 
 response = openai.Completion.create(
 
