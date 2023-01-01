@@ -77,3 +77,16 @@ Pattern: \|srcIP=([\d.]+)\|srcPort=(\d+)\|srcMAC=([\w:]+)\|dstIP=([\d.]+)\|dstPo
 
   
  As you can see it is NOT perfect. BUt it did parse out the information i was looking for from the syslog file with a regex pattern that matches that log string.
+ 
+ 
+ Another example of me asking it to take a syslog file and parse it for me into a table
+ 
+ Take the following syslog file and parse out the important parts such as - | Source IP | Destination IP | Source Port | Destination Port | Source MAC | - and put the data in a table
+
+Tue Mar 04 15:57:06 2020: <14>Mar  4 15:53:03 BAR-NG-VF500 BAR-NG-VF500/box_Firewall_Activity:  Info     BAR-NG-VF500 Remove: type=FWD|proto=UDP|srcIF=eth1|srcIP=192.168.70.7|srcPort=35119|srcMAC=08:00:27:da:d7:9c|dstIP=8.8.8.8|dstPort=53|dstService=domain|dstIF=eth0|rule=InternetAccess/<App>:RestrictTim|info=Balanced Session Idle Timeout|srcNAT=192.168.70.7|dstNAT=8.8.8.8|duration=21132|count=1|receivedBytes=130|sentBytes=62|receivedPackets=1|sentPackets=1|user=|protocol=|application=|target=|content=|urlcat
+=|
+
+| Source IP | Destination IP | Source Port | Destination Port | Source MAC |
+|:----------|:---------------|:------------|:-----------------|:-----------|
+| 192.168.70.7 | 8.8.8.8 | 35119 | 53 | 08:00:27:da:d7:9c |
+
