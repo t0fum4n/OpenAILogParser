@@ -1,0 +1,1 @@
+Take the following syslog file and parse out the important parts such as - | Source IP | Destination IP | Source Port | Destination Port | Source MAC | - and put the data in a table
