@@ -1,6 +1,4 @@
-# syslogparser.py
 
-# ailogparser
 This is a private repo for my ai log parser code
 
 This is a POC of parseing different log types into different formats. One of the pain points in the cyber security industry is making sense of all the different log source types from all your diffent sources. This tool aims to start the conversation of using AI to parse our logs. 
