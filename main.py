@@ -1,45 +1,25 @@
-# Import the openai module
+import requests
 
-import openai
+model = "text-davinci-002" # the OpenAI API model you want to use
+prompt = "What is the meaning of life?" # the prompt you want to generate a response for
 
+url = f"https://api.openai.com/v1/engines/{model}/jobs"
 
-# Configure the openai module by setting the secret key
+headers = {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer API_KEY", # Replace API_KEY with your OpenAI API key
+}
 
-openai.api_key_path = "key"
+data = {
+  "prompt": prompt,
+  "max_tokens": 128,
+  "temperature": 0.5,
+}
 
+response = requests.post(url, headers=headers, json=data)
 
-
-# Open a file named input.txt and read that entire file into a variable named input
-
-with open('command.txt') as c, open("input.txt") as f:
-    command = c.read()
-    input = f.read()
-
-
-# Print the value of the variable named input
-
-print(command + '\n' + '\n' + input)
-
-
-
-# create a completion
-
-response = openai.Completion.create(
-
-    model="text-davinci-003",
-
-    max_tokens=300,
-
-    prompt=command + '\n' + '\n' + input,
-
-    temperature=0.3,
-
-    top_p=1,
-
-    stop="|<EndOfText>|"
-
-)
-
-# print the completion
-
-print(response.choices[0].text)
+if response.status_code == 200:
+    result = response.json()
+    print(result["choices"][0]["text"])
+else:
+    print("Failed to generate response from OpenAI API")
